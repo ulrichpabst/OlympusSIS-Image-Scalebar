@@ -34,7 +34,7 @@ def add_scale_bar_to_images(directory, scalecolor = 'white'):
         dpi = tags.get('XResolution').value[0] / tags.get('XResolution').value[1] if 'XResolution' in tags else 300
         fig, ax = plt.subplots(figsize=(image.shape[1] / dpi, image.shape[0] / dpi), dpi=dpi)
 
-        ax.imshow(image, cmap='gray', interpolation='antialiased', vmin = 0, vmax = 65535)
+        ax.imshow(image, cmap='gray', interpolation='antialiased')
         ax.axis('off')
 
         bar_height = max(2, int(image.shape[0] * 0.0035))
