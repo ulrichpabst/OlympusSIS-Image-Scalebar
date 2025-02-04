@@ -67,6 +67,6 @@ def main():
         sys.exit()
 
     args = parser.parse_args()
-    add_scale_bar_to_images(args.directory)
+    add_scale_bar_to_images(args.directory, args.color)
 
 if __name__ == '__main__': main()
